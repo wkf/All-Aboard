@@ -1,0 +1,36 @@
+
+@font-face {
+    font-family: 'villa_didotblack';
+    src: url('villa_didot_black-webfont.eot');
+    src: url('villa_didot_black-webfont.eot?#iefix') format('embedded-opentype'),
+         url('villa_didot_black-webfont.woff') format('woff'),
+         url('villa_didot_black-webfont.ttf') format('truetype'),
+         url('villa_didot_black-webfont.svg#villa_didotblack') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'villa_didotoutline';
+    src: url('villa_didot_outline-webfont.eot');
+    src: url('villa_didot_outline-webfont.eot?#iefix') format('embedded-opentype'),
+         url('villa_didot_outline-webfont.woff') format('woff'),
+         url('villa_didot_outline-webfont.ttf') format('truetype'),
+         url('villa_didot_outline-webfont.svg#villa_didotoutline') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'villa_didotregular';
+    src: url('villa_didot-webfont.eot');
+    src: url('villa_didot-webfont.eot?#iefix') format('embedded-opentype'),
+         url('villa_didot-webfont.woff') format('woff'),
+         url('villa_didot-webfont.ttf') format('truetype'),
+         url('villa_didot-webfont.svg#villa_didotregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
