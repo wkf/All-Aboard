@@ -229,6 +229,17 @@ module.exports = function (grunt) {
     },
 
     coffee: {
+      src: {
+        files: [{
+          expand: true,
+          cwd: 'src',
+          src: '**/*.coffee',
+          dest: 'api',
+          rename: function (dest, src) {
+            return dest + '/' + src.replace('.coffee', '.js');
+          }
+        }]
+      },
       dev: {
         files: [{
           expand: true,
@@ -393,6 +404,10 @@ module.exports = function (grunt) {
         // API files to watch:
         files: ['api/**/*']
       },
+      src: {
+        files: ['src/**/*.coffee'],
+        tasks: ['coffee:src']
+      },
       assets: {
 
         // Assets to watch:
@@ -414,6 +429,7 @@ module.exports = function (grunt) {
 
   // When Sails is lifted:
   grunt.registerTask('default', [
+    'coffee:src',
     'compileAssets',
     'linkAssets',
     'watch'
