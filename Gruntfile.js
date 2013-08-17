@@ -132,8 +132,8 @@ module.exports = function (grunt) {
   grunt.loadTasks(depsPath + '/grunt-contrib-watch/tasks');
   grunt.loadTasks(depsPath + '/grunt-contrib-uglify/tasks');
   grunt.loadTasks(depsPath + '/grunt-contrib-cssmin/tasks');
-  grunt.loadTasks(depsPath + '/grunt-contrib-less/tasks');
   grunt.loadTasks('node_modules/grunt-contrib-coffee/tasks');
+  grunt.loadTasks('node_modules/grunt-contrib-compass/tasks');
 
   // Project configuration.
   grunt.initConfig({
@@ -180,26 +180,6 @@ module.exports = function (grunt) {
         files: {
           '.tmp/public/jst.js': templateFilesToInject
         }
-      }
-    },
-
-    less: {
-      dev: {
-        files: [
-          {
-          expand: true,
-          cwd: 'assets/styles/',
-          src: ['*.less'],
-          dest: '.tmp/public/styles/',
-          ext: '.css'
-        }, {
-          expand: true,
-          cwd: 'assets/linker/styles/',
-          src: ['*.less'],
-          dest: '.tmp/public/linker/styles/',
-          ext: '.css'
-        }
-        ]
       }
     },
 
@@ -250,6 +230,15 @@ module.exports = function (grunt) {
             return dest + '/' + src.replace('.coffee', '.js');
           }
         }]
+      }
+    },
+
+    compass: {
+      dev: {
+        options: {
+          sassDir: 'assets/styles',
+          cssDir: '.tmp/public/styles'
+        }
       }
     },
 
@@ -423,6 +412,10 @@ module.exports = function (grunt) {
       jst: {
         files: ['assets/**/*.html'],
         tasks: ['jst']
+      },
+      compass: {
+        files: ['assets/styles/**/*.{scss,sass}'],
+        tasks: ['compass:dev']
       }
     }
   });
@@ -439,7 +432,7 @@ module.exports = function (grunt) {
     'clean:dev',
     'coffee:dev',
     'jst:dev',
-    'less:dev',
+    'compass:dev',
     'copy:dev'
   ]);
 
@@ -468,7 +461,6 @@ module.exports = function (grunt) {
   grunt.registerTask('prod', [
     'clean:dev',
     'jst:dev',
-    'less:dev',
     'copy:dev',
     'concat',
     'uglify',
