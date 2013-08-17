@@ -3,4 +3,9 @@
   Show.Controller =
 
     show: ->
-      App.mainRegion.show new Show.PlayerLayout()
+      @layout = new Show.PlayerLayout()
+
+      @layout.on 'show', =>
+        @layout.cardsRegion.show App.request('get:cards:view')
+
+      App.mainRegion.show @layout
