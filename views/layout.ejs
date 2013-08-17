@@ -10,6 +10,8 @@
   <body>
     <%- body %>
 
+    <div id='main-region'></div>
+
     <!-- A few key dependencies, linked in order -->
 
     <!-- Bring in the socket.io client -->
@@ -28,6 +30,33 @@
     <script type="text/javascript" src="/js/vendor/backbone.marionette.js"></script>
 
     <!-- App -->
-    <script type="text/javascript" src="/jst.js"></script>
+      <!-- Templates -->
+      <script type="text/javascript" src="/jst.js"></script>
+
+      <!-- Ext -->
+      <script type="text/javascript" src="/js/ext/backbone.marionette.js"></script>
+
+      <!-- Core -->
+      <script type="text/javascript" src="/js/aa.js"></script>
+
+      <!-- Models -->
+      <script type="text/javascript" src="/js/models/card.js"></script>
+      <script type="text/javascript" src="/js/models/card-group.js"></script>
+
+      <!-- Collections -->
+      <script type="text/javascript" src="/js/collections/cards.js"></script>
+      <script type="text/javascript" src="/js/collections/card-groups.js"></script>
+
+      <!-- Player -->
+      <script type="text/javascript" src="/js/apps/player/player-app.js"></script>
+      <script type="text/javascript" src="/js/apps/player/show/show-controller.js"></script>
+      <script type="text/javascript" src="/js/apps/player/show/views/player-layout.js"></script>
+
+      <!-- Cards -->
+      <script type="text/javascript" src="/js/apps/player/cards/cards-app.js"></script>
+      <script type="text/javascript" src="/js/apps/player/cards/list/list-controller.js"></script>
+      <script type="text/javascript" src="/js/apps/player/cards/list/views/card-groups.js"></script>
+
+      <script type="text/javascript" src="/js/main.js"></script>
     </body>
 </html>
