@@ -6,6 +6,7 @@
 
   class CardGroup extends Marionette.CompositeView
     template: 'card-group'
+    className: 'card-group'
     itemView: Card
     itemViewContainer: '.cards'
 
