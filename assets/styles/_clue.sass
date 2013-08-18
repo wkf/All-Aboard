@@ -1,12 +1,32 @@
 #clues-region
   @include box-shadow(0 0 21px 0 rgba(0, 0, 0, 0.4) inset)
   background-image: url('/images/background-main.jpg')
+  border: solid white
+  border-width: 4px 0 4px 2px
+  overflow-y: scroll
   width: 50%
   float: right
+
+  .clue-group
+    background-color: white
+    border-bottom: 2px solid rgb(229, 228, 222)
+    margin: auto
+    width: 90%
+
+    &:first-child
+      @include border-radius(5px 5px 0 0)
 
 .clue
   padding: 1px
   clear: both
+  margin-left: 3px
+  padding-top: 4px
+
+  &:last-child
+    padding-bottom: 4px
+
+  .checkbox, .name
+    display: inline-block
 
   .checkbox
     background-color: lightgrey
@@ -14,9 +34,9 @@
     width: 20px
     height: 20px
     text-align: center
-    float: left
 
   .check
+    font-family: 'vd-black'
     opacity: 0
 
     &.selected
@@ -24,4 +44,3 @@
 
   .name
     line-height: 20px
-    float: left
