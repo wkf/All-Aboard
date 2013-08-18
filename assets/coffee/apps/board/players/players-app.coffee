@@ -8,13 +8,13 @@
 
   App.addInitializer ->
     players = new App.Collections.Players [
-      name: 'Player 1'
+      name: 'Scarlett'
       image: 'piece-scarlett.png'
       position:
         top: '428px'
         left: '10px'
     ,
-      name: 'Player 2'
+      name: 'Mustard'
       image: 'piece-mustard.png'
       position:
         top: '217px'

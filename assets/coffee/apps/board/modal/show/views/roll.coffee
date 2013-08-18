@@ -7,6 +7,7 @@
     initialize: (options={}) ->
       @data = options ? {}
       @data.number ?= _.random(1, 6)
+      @model = App.request('get:players').at(@data.playerId - 1)
 
     templateHelpers: ->
       number: @data.number
