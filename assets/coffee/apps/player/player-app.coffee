@@ -15,3 +15,6 @@
 
   App.commands.setHandler 'assign:player', ->
     API.showPlayerLayout()
+
+  App.vent.on 'show:card', (card) ->
+    PlayerApp.Show.Controller.showCard card

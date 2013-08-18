@@ -1,13 +1,9 @@
 @AA.module 'CardsApp.List', (List, App, Backbone, Marionette, $, _) ->
 
-  class Card extends Marionette.ItemView
-    template: 'card'
-    className: 'card'
-
   class CardGroup extends Marionette.CompositeView
     template: 'card-group'
     className: 'card-group'
-    itemView: Card
+    itemView: App.Views.Card
     itemViewContainer: '.cards'
 
     initialize: ->
