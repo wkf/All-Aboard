@@ -1,8 +1,12 @@
 (function() {
   module.exports = {
     show: function(req, res) {
+      Boards.subscribe(req.socket, (req.param('id')) || 1);
       return res.view({
-        title: 'Board'
+        title: 'Board',
+        bootstrap: {
+          players: [1, 2]
+        }
       });
     },
     join: function(req, res) {
