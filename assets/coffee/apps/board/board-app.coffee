@@ -4,5 +4,7 @@
     showBoardLayout: ->
       BoardApp.Show.Controller.show()
 
+  socket.post "/boards/join/1", {}, (err, data) -> console.log(err, data)
+
   App.commands.setHandler 'assign:board', ->
     API.showBoardLayout()
