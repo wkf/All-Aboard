@@ -12,14 +12,6 @@
     message: (boardId = 1, type, data, callback) ->
       socket.post "/boards/message/#{boardId}", {type, data}, callback
 
-    roll: (boardId = 1, callback = ->) ->
-      socket.post "/boards/message/#{boardId}", {
-        type: 'roll',
-        data: {
-          playerId: App.playerId
-        }
-      }, (err, data) -> if err then console.error(err) else console.log(data)
-
   App.commands.setHandler 'assign:player', ->
     API.showPlayerLayout()
 
