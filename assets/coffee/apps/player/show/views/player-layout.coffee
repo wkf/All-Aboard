@@ -9,4 +9,4 @@
       actionsRegion: '#action-region'
       cardsRegion:   '#cards-region'
       cluesRegion:   '#clues-region'
-
+      cardRegion:    '#card-region'
