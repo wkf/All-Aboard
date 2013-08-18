@@ -8,3 +8,7 @@
 
   App.commands.setHandler 'assign:board', ->
     API.showBoardLayout()
+
+  App.vent.on 'roll', (data) ->
+    {playerId} = data
+    BoardApp.Show.Controller.roll data
