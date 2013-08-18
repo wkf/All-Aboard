@@ -11,6 +11,9 @@
     template: 'player-layout'
     className: 'player-layout'
 
+    initialize: ->
+      @model = App.request('get:players').at(App.playerId - 1)
+
     regions:
       headerRegion:  '#header-region'
       actionsRegion: '#action-region'
