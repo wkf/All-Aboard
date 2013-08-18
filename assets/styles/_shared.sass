@@ -1,0 +1,23 @@
+.player-icon
+  border: 4px solid $white
+  +circle
+  color: $white
+  font-size: 18px
+  height: 32px
+  margin-top: 7px
+  position: absolute
+  text-align: center
+  width: 32px
+
+  span
+    box-sizing: border-box
+    +circle
+    display: inline-block
+    height: 100%
+    line-height: 25px
+    width: 100%
+
+  &.red
+    background-color: rgb( 222, 64, 54)
+    span
+      border: 4px solid rgb(206, 55, 47)
