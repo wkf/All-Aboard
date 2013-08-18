@@ -6,4 +6,5 @@
 
     regions:
       playersRegion: '#players-region'
+      modalRegion:   '#modal-region'
       footerRegion:  '#footer-region'
